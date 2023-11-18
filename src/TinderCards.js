@@ -5,25 +5,26 @@ import "./TinderCards.css";
 
 
 function TinderCards(props) {
-    const [people, setPeople] = useState([
-        {
-            name: 'lacko makco',
-            url: 'https://i.imgur.com/dnSU231.png'
-        },
-        {
-            name: 'peti petyko',
-            url: 'https://i.imgur.com/6HhUZTF.jpeg'
-        },
-        {
-            name: 'adam batyam',
-            url: 'https://i.imgur.com/dp8GGOg.jpeg'
-        },
-        {
-            name: 'lilla billa',
-            url: 'https://i.imgur.com/uPErBKg.jpeg'
-        }
-    ]);
+    // const [people, setPeople] = useState([
+    //     {
+    //         name: 'lacko makco',
+    //         url: 'https://i.imgur.com/dnSU231.png'
+    //     },
+    //     {
+    //         name: 'peti petyko',
+    //         url: 'https://i.imgur.com/6HhUZTF.jpeg'
+    //     },
+    //     {
+    //         name: 'adam batyam',
+    //         url: 'https://i.imgur.com/dp8GGOg.jpeg'
+    //     },
+    //     {
+    //         name: 'lilla billa',
+    //         url: 'https://i.imgur.com/uPErBKg.jpeg'
+    //     }
+    // ]);
 
+    const [people, setPeople] = useState([]);
     useEffect(() => {
         const unsubscribe = database
             .collection('people')

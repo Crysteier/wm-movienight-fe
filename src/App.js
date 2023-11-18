@@ -8,16 +8,17 @@ import {
 } from "react-router-dom";
 import TinderCards from './TinderCards';
 import SwipeButtons from './SwipeButtons';
+import Chats from './Chats.js';
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <BrowserRouter>
+
         <Routes>
-          <Route path='/chat' element={<h1>Chat is here!</h1>} />
-          <Route path='/' element={[<TinderCards />, <SwipeButtons />, <filipGomb />]} />
+          <Route path='/chat' element={[<Header backButton={"/"} />, <h1>Chat is here!</h1>,<Chats />]} />
+          <Route path='/' element={[<Header />, <TinderCards />, <SwipeButtons />]} />
         </Routes>
       </BrowserRouter>
     </div>
